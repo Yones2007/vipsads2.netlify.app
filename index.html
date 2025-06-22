@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>منصة المساعد التعليمية - سيرفر مدفوع</title>
+    <script src="https://cdn.jsdelivr.net/npm/hls.js@latest"></script>
     <style>
         * {
             margin: 0;
@@ -636,7 +637,11 @@
             
             let videoUrl = videoData.url;
             if (videoData.needsProxy) {
-                videoUrl = `https://proxyvip2.sadshelpiq.workers.dev/proxy/${videoData.url}`;
+                // تأكد من أن الرابط يبدأ بـ https://
+                if (!videoUrl.startsWith('https://')) {
+                    videoUrl = 'https://' + videoUrl;
+                }
+                videoUrl = `https://proxyvip2.sadshelpiq.workers.dev/proxy/${videoUrl}`;
             }
 
             container.innerHTML = `
@@ -651,14 +656,26 @@
                 ` : ''}
                 <video controls id="main-video" style="width: 100%; border-radius: 15px;">
                     <source src="${videoUrl}" type="application/x-mpegURL">
-                    <source src="${videoUrl}" type="video/mp4">
+                    <source src="${videoUrl.replace('.m3u8', '.mp4')}" type="video/mp4">
                     متصفحك لا يدعم تشغيل الفيديو
                 </video>
             `;
 
-            // Store original URL for quality changes
+            // تخزين الرابط الأصلي لتغيير الجودة
             if (videoData.needsProxy) {
                 window.currentVideoBase = videoData.url;
+            }
+            
+            // إضافة دعم HLS إذا لزم الأمر
+            if (videoUrl.includes('.m3u8')) {
+                if (Hls.isSupported()) {
+                    const hls = new Hls();
+                    hls.loadSource(videoUrl);
+                    hls.attachMedia(document.getElementById('main-video'));
+                } else if (document.getElementById('main-video').canPlayType('application/vnd.apple.mpegurl')) {
+                    // دعم HLS الأصلي في Safari
+                    document.getElementById('main-video').src = videoUrl;
+                }
             }
         }
 
@@ -666,22 +683,33 @@
         function changeQuality(quality) {
             if (!window.currentVideoBase) return;
 
-            // Remove active class from all quality buttons
+            // إزالة الفئة النشطة من جميع أزرار الجودة
             document.querySelectorAll('.quality-btn').forEach(btn => btn.classList.remove('active'));
-            // Add active class to clicked button
+            // إضافة الفئة النشطة للزر المختار
             event.target.classList.add('active');
 
-            // Replace quality in URL
-            const newUrl = window.currentVideoBase.replace(/\/(360|480|720|1080)p\//, `/${quality}/`);
-            const proxyUrl = `https://proxyvip2.sadshelpiq.workers.dev/proxy/${newUrl}`;
+            // استبدال الجودة في الرابط
+            const newUrl = window.currentVideoBase
+                .replace(/\/(360|480|720|1080)p\//, `/${quality}/`)
+                .replace('video.m3u8', `video_${quality}.m3u8`);
             
+            const proxyUrl = `https://proxyvip2.sadshelpiq.workers.dev/proxy/${newUrl}`;
             const video = document.getElementById('main-video');
             const currentTime = video.currentTime;
             
-            video.src = proxyUrl;
-            video.addEventListener('loadedmetadata', () => {
-                video.currentTime = currentTime;
-            }, { once: true });
+            if (Hls.isSupported()) {
+                const hls = new Hls();
+                hls.loadSource(proxyUrl);
+                hls.attachMedia(video);
+                hls.on(Hls.Events.MANIFEST_PARSED, () => {
+                    video.currentTime = currentTime;
+                });
+            } else {
+                video.src = proxyUrl;
+                video.addEventListener('loadedmetadata', () => {
+                    video.currentTime = currentTime;
+                }, { once: true });
+            }
         }
 
         // Study Challenge Functions
@@ -726,18 +754,18 @@
             const randomText = motivationalTexts[Math.floor(Math.random() * motivationalTexts.length)];
             document.getElementById('motivational-text').textContent = randomText;
             
-            // Update motivational text every 5 minutes during challenge
+            // تحديث النص التحفيزي كل 5 دقائق أثناء التحدي
             if (challengeTimer) {
                 setTimeout(() => {
                     if (challengeTimer) {
                         updateMotivationalText();
                     }
-                }, 300000); // 5 minutes
+                }, 300000); // 5 دقائق
             }
         }
 
         function playSuccessSound() {
-            // Create a simple success sound using Web Audio API
+            // إنشاء صوت نجاح باستخدام Web Audio API
             if ('AudioContext' in window || 'webkitAudioContext' in window) {
                 const audioContext = new (window.AudioContext || window.webkitAudioContext)();
                 const oscillator = audioContext.createOscillator();
