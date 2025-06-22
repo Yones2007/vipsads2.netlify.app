@@ -65,19 +65,34 @@
               "url": "https://vz-99e5c202-ca5.b-cdn.net/30656e48-8624-4306-89d4-5cf415d5383c/720p/video.m3u8"
             },
             {
-              "title": " الاسئلة المزعجة ",
-              "description": "تدريبات وأسئلة للطلاب",
-              "url": "https://vz-99e5c202-ca5.b-cdn.net/b43feaed-fd2f-488e-a6d5-45958d7af870/720p/video.m3u8"
-            },
-            {
-              "title": "مسائل ربط التوالي والتوازي",
-              "description": "مسائل",
-              "url": "https://vz-99e5c202-ca5.b-cdn.net/c812d218-8640-47b5-b383-a7ecf3638aeb/720p/video.m3u8"
-            },
-            {
-              "title": "مسائل ربط التوالي والتوازي",
-              "description": "الجزء 2",
+              "title": "الاسئلة المزعجة",
+              "description": "",
               "url": "https://vz-99e5c202-ca5.b-cdn.net/79c20fa4-2c9b-4a03-b0dc-43fef6a31ca7/720p/video.m3u8"
+            },
+            {
+              "title": "مسائل ربط التوالي والتوازي",
+              "description": "",
+              "url": "https://vz-99e5c202-ca5.b-cdn.net/c888152a-0c5c-4ff3-9143-47f2edbfa7fc/720p/video.m3u8"
+            },
+            {
+              "title": "مسائل الربط المختلط",
+              "description": "",
+              "url": "https://vz-99e5c202-ca5.b-cdn.net/46d17f34-f1c4-4448-988a-ad56a289b8a9/720p/video.m3u8"
+            },
+            {
+              "title": "مسائل الربط المختلط (الأشكال الخاصة)",
+              "description": "",
+              "url": "https://vz-99e5c202-ca5.b-cdn.net/b88f6c24-c638-4ec1-9422-70edb87cfea4/720p/video.m3u8"
+            },
+            {
+              "title": "مسائل الربط المختلط (اسئلة الطلاب)",
+              "description": "",
+              "url": "https://vz-99e5c202-ca5.b-cdn.net/dc82532a-98a1-4a3b-be9c-183dc44ad00c/720p/video.m3u8"
+            },
+            {
+              "title": "مسائل الربط المختلط (الوزاريات)",
+              "description": "",
+              "url": "https://vz-99e5c202-ca5.b-cdn.net/7b26005c-71e8-439a-8ad9-534f23da148d/720p/video.m3u8"
             }
           ]
         }
@@ -168,9 +183,19 @@
               "url": "https://vz-99e5c202-ca5.b-cdn.net/f6690928-fda3-4e4a-85a1-44c42f5cfdc1/720p/video.m3u8"
             },
             {
-              "title": " المحاضرة الخامسة عشر (حل المعادلة من الدرجة الثانية)",
+              "title": "المحاضرة الخامسة عشر (الجذور التربيعية للعدد المركب (النوع الثالث)",
               "description": "",
               "url": "https://vz-99e5c202-ca5.b-cdn.net/ca2d0c98-6712-4727-a74a-5f4f492f1bad/720p/video.m3u8"
+            },
+            {
+              "title": "المحاضرة السادسة عشر (حل المعادلة من الدرجة الثانية)",
+              "description": "",
+              "url": "https://vz-99e5c202-ca5.b-cdn.net/93c4a9dd-3b5e-4b7a-92b9-fc3ac53b9850/720p/video.m3u8"
+            },
+            {
+              "title": "المحاضرة السابعة عشر (تكوين المعادلة التربيعية)",
+              "description": "",
+              "url": "https://vz-99e5c202-ca5.b-cdn.net/93c4a9dd-3b5e-4b7a-92b9-fc3ac53b9850/720p/video.m3u8"
             }
           ]
         }
@@ -186,29 +211,19 @@
           "name": "الأساسيات",
           "lectures": [
             {
-              "title": " في اللغة الانجليزية (ed) إضافة",
-              "description": "شرح استخدام ed مع الأفعال والأسماء",
+              "title": "محاضرة 1",
+              "description": "",
               "url": "https://vz-99e5c202-ca5.b-cdn.net/fae0d70a-e4c7-46e0-a046-e8b52436e9fa/720p/video.m3u8"
             },
             {
-              "title": " في اللغة الانجليزية (ing) إضافة",
-              "description": "استخدام ing ودلالاته",
+              "title": "محاضرة 2",
+              "description": "",
               "url": "https://vz-99e5c202-ca5.b-cdn.net/1138f878-d8fa-4ed2-8228-f4c237b53d16/720p/video.m3u8"
             },
             {
-              "title": " الجمع في اللغة الانجليزية (s) إضافة",
-              "description": "شرح قواعد الجمع واستخدام s",
+              "title": "محاضرة 3",
+              "description": "",
               "url": "https://vz-99e5c202-ca5.b-cdn.net/5cb01382-c193-420f-a418-e6b10e0959d2/720p/video.m3u8"
-            },
-            {
-              "title": " (ed, ing) الصفات المنتهية ب",
-              "description": "شرح الفرق بين الصفات المنتهية بـ ed و ing",
-              "url": "https://vz-99e5c202-ca5.b-cdn.net/4473a98c-71c0-4586-aa98-ed529584f9b3/720p/video.m3u8"
-            },
-            {
-              "title": " (ful, fully) الكلمات المنتهية ب",
-              "description": "شرح استخدام ful و fully في تكوين الصفات",
-              "url": "https://vz-99e5c202-ca5.b-cdn.net/551c769b-a25b-4706-a689-82a1b77bd06e/720p/video.m3u8"
             }
           ]
         },
@@ -216,24 +231,44 @@
           "name": "اليونت الأول",
           "lectures": [
             {
-              "title": " أدوات الربط",
-              "description": "شرح أدوات الربط في اللغة الإنجليزية",
+              "title": "محاضرة 1",
+              "description": "",
               "url": "https://vz-99e5c202-ca5.b-cdn.net/cce812a8-9008-44cf-a16e-00d7d82235a2/720p/video.m3u8"
             },
             {
-              "title": " اعلانات السجائر يجب أن تكون غير قانونية",
-              "description": "موضوع كتابي تطبيقي لليونت الأول",
+              "title": "محاضرة 2",
+              "description": "",
               "url": "https://vz-99e5c202-ca5.b-cdn.net/3954a176-e22e-477a-be35-f5c65c0d1d16/720p/video.m3u8"
             },
             {
-              "title": " اصبع قدمي ينزف ",
-              "description": "بدون تسخيت وكملها",
+              "title": "محاضرة 3",
+              "description": "",
+              "url": "https://vz-99e5c202-ca5.b-cdn.net/4473a98c-71c0-4586-aa98-ed529584f9b3/720p/video.m3u8"
+            },
+            {
+              "title": "محاضرة 4",
+              "description": "",
+              "url": "https://vz-99e5c202-ca5.b-cdn.net/551c769b-a25b-4706-a689-82a1b77bd06e/720p/video.m3u8"
+            },
+            {
+              "title": "محاضرة 5",
+              "description": "",
               "url": "https://vz-99e5c202-ca5.b-cdn.net/603fabc7-aa58-478e-8759-99937ba45b13/720p/video.m3u8"
             },
             {
-              "title": "اصبع قدمي الجزء الثاني",
+              "title": "محاضرة 6",
               "description": "",
               "url": "https://vz-99e5c202-ca5.b-cdn.net/03d0562c-15b7-4946-b7aa-bae0042cc94e/720p/video.m3u8"
+            },
+            {
+              "title": "محاضرة 7",
+              "description": "",
+              "url": "https://vz-99e5c202-ca5.b-cdn.net/9aa6fca5-83e2-4925-bce2-b654f26bcc27/720p/video.m3u8"
+            },
+            {
+              "title": "محاضرة 8",
+              "description": "",
+              "url": "https://vz-99e5c202-ca5.b-cdn.net/032cc79d-fc78-46f2-b1f6-f3a5adb5a0dc/720p/video.m3u8"
             }
           ]
         }
@@ -309,9 +344,34 @@
               "url": "https://vz-99e5c202-ca5.b-cdn.net/1b47ad43-8b7f-419e-9e7e-5245fb2de6da/720p/video.m3u8"
             },
             {
-              "title": " الدرس العاشر",
-              "description": "الأسئلة الوزارية وتحليلها",
+              "title": "الدرس العاشر",
+              "description": "",
               "url": "https://vz-99e5c202-ca5.b-cdn.net/b616633f-7255-4e29-aa6d-f0186e2bbd3b/720p/video.m3u8"
+            },
+            {
+              "title": "الدرس الحادي عشر",
+              "description": "",
+              "url": "https://vz-99e5c202-ca5.b-cdn.net/9d535868-8cf7-4ea1-9528-0136c1d6a6b0/720p/video.m3u8"
+            },
+            {
+              "title": "الدرس الثاني عشر",
+              "description": "",
+              "url": "https://vz-99e5c202-ca5.b-cdn.net/88a4d4a2-16f0-406b-871a-ddce38bbb7d8/720p/video.m3u8"
+            },
+            {
+              "title": "الدرس الثالث عشر : حل واجبات الفصل الاول من 1 الى 15",
+              "description": "",
+              "url": "https://vz-99e5c202-ca5.b-cdn.net/a0972037-e610-46fd-bd31-afe7cb4f3970/720p/video.m3u8"
+            },
+            {
+              "title": "الدرس الرابع عشر : (حساب مجموع الانثالبي)",
+              "description": "",
+              "url": "https://vz-99e5c202-ca5.b-cdn.net/7d705e4a-06fa-4471-b0d0-2e9676740862/720p/video.m3u8"
+            },
+            {
+              "title": "الدرس الخامس عشر : (العمليات التلقائية والانتروبي)",
+              "description": "",
+              "url": "https://vz-99e5c202-ca5.b-cdn.net/f2115efe-13fe-4ea3-a340-53cdfb73764e/720p/video.m3u8"
             }
           ]
         }
@@ -324,102 +384,87 @@
       "image": "https://i.imghippo.com/files/tTv3116HA.png",
       "classes": [
         {
-          "name": "الأساسيات",
+          "name": "الاساسيات",
           "lectures": [
             {
-              "title": " أساسيات الفيزياء",
-              "description": "مقدمة عامة للمادة وأهم المبادئ",
-              "url": "https://vz-99e5c202-ca5.b-cdn.net/7f2873a8-c450-4db3-819a-1cfc518c23f8/720p/video.m3u8"
+              "title": "محاضرة 1",
+              "description": "",
+              "url": "https://vz-99e5c202-ca5.b-cdn.net/583c5061-6c9e-4d79-b4c0-f4274fa4af84/720p/video.m3u8"
             },
             {
-              "title": " اساسيات الفيزياء (الجزء الثاني)",
+              "title": "محاضرة 2",
               "description": "",
               "url": "https://vz-99e5c202-ca5.b-cdn.net/0290b143-5dae-4ad3-9af2-6af5b33da003/720p/video.m3u8"
             },
             {
-              "title": " أساسيات الفيزياء (الجزء الثالث)",
+              "title": "محاضرة 3",
               "description": "",
               "url": "https://vz-99e5c202-ca5.b-cdn.net/156d9561-0cdf-45c4-85ca-118f490ec6f9/720p/video.m3u8"
-            },
-            {
-              "title": " الموصل الكروي",
-              "description": "",
-              "url": "https://vz-99e5c202-ca5.b-cdn.net/cb0aaac5-1614-4c41-a2b8-50d7463c9a68/720p/video.m3u8"
             }
           ]
         },
         {
-          "name": "الفصل الأول: المتسعات",
+          "name": "الفصل الاول: المتسعات",
           "lectures": [
             {
-              "title": " المتسعة وسعة المتسعة",
+              "title": " 1",
+              "description": "",
+              "url": "https://vz-99e5c202-ca5.b-cdn.net/cb0aaac5-1614-4c41-a2b8-50d7463c9a68/720p/video.m3u8"
+            },
+            {
+              "title": " 2",
               "description": "",
               "url": "https://vz-99e5c202-ca5.b-cdn.net/e1bcbd27-d90a-4e9e-b930-5c41d4f89ba7/720p/video.m3u8"
             },
             {
-              "title": " المتسعة وسعة المتسعة (الجزء الثاني)",
+              "title": " 3 : سعه المتسعه الجزء الثاني",
               "description": "",
               "url": "https://vz-99e5c202-ca5.b-cdn.net/2b0c371f-0038-4d0e-a6c1-4f8ad98ebe96/720p/video.m3u8"
             },
             {
-              "title": " العازل الكهربائي",
+              "title": " 4 : العازل الكهربائي",
               "description": "",
               "url": "https://vz-99e5c202-ca5.b-cdn.net/e2b3b8e7-e2a4-4029-8c03-f9db48b17431/720p/video.m3u8"
             },
             {
-              "title": " قوة العزل الكهربائي",
+              "title": " 5 : قوه العزل الكهربائي",
               "description": "",
               "url": "https://vz-99e5c202-ca5.b-cdn.net/15f473a2-6f45-447a-9771-43059321c296/720p/video.m3u8"
             },
             {
-              "title": " أساس عمل المتسعة",
-              "description": "شرح كيفية تخزين الشحنة داخل المتسعة",
-              "url": "https://vz-99e5c202-ca5.b-cdn.net/623af7df-e18e-49a5-a140-5db6238d2d0b/720p/video.m3u8"
+              "title": " 6 : تجربه فاراداي",
+              "description": "",
+              "url": "https://vz-99e5c202-ca5.b-cdn.net/c97e68b9-e4ec-43fe-b105-88d5449061ed/720p/video.m3u8"
             },
             {
-              "title": " أشكال المتسعات",
-              "description": "أشكال وأنواع المتسعات الشائعة",
-              "url": "https://vz-99e5c202-ca5.b-cdn.net/b1e8199a-1e73-41f2-817b-195170e3fb2a/720p/video.m3u8"
+              "title": " 7 : تأثير المساحه السطحيه والبعد بين صفيحتين على المتسعه",
+              "description": "",
+              "url": "https://vz-99e5c202-ca5.b-cdn.net/b3e3b411-c003-4300-a1ae-98a4d1a75e4b/720p/video.m3u8"
             },
             {
-              "title": " عوازل المتسعات",
-              "description": "أهمية المواد العازلة وتأثيرها",
-              "url": "https://vz-99e5c202-ca5.b-cdn.net/c1c1be8d-4121-43a3-98d7-e251226d320e/720p/video.m3u8"
+              "title": " 8 : تأثير العازل على المتسعه المتصله والمنفصله",
+              "description": "",
+              "url": "https://vz-99e5c202-ca5.b-cdn.net/ec6fd490-98ea-7208-925a-4df02dfaea03/720p/video.m3u8"
             },
             {
-              "title": " المتسعة بوجود العازل",
-              "description": "تأثير العازل على السعة والطاقة",
-              "url": "https://vz-99e5c202-ca5.b-cdn.net/b9071139-ffe3-403c-aea5-ee3b00e403eb/720p/video.m3u8"
+              "title": " 9 : سلوك المتسعه عند توصيلها بالبطاريه",
+              "description": "",
+              "url": "https://vz-99e5c202-ca5.b-cdn.net/8c7f09a6-863d-497e-9b4a-593aae156285/720p/video.m3u8"
             },
             {
-              "title": " قوانين المتسعة الواحدة بوجود العازل الكهربائي",
-              "description": "قوانين السعة والطاقة في وجود العازل",
-              "url": "https://vz-99e5c202-ca5.b-cdn.net/e245ad79-ba95-4afe-8b4d-1ec2fe769cd0/720p/video.m3u8"
+              "title": " 10 : سلوك المتسعه عند توصيلها بالبطاريه (الجزء الثاني)",
+              "description": "",
+              "url": "https://vz-99e5c202-ca5.b-cdn.net/492f37fc-d850-4aaa-bfcf-62ce04a551fc/720p/video.m3u8"
             },
             {
-              "title": " المتسعة الواحدة بوجود العازل الكهربائي (الجزء الثاني)",
-              "description": "تكملة الشرح السابق مع تطبيقات",
-              "url": "https://vz-99e5c202-ca5.b-cdn.net/117aec35-b995-41d3-8c1d-d24f813d3eef/720p/video.m3u8"
+              "title": " 11 : العوامل المؤثره في الشحنه والطاقه في المتسعات",
+              "description": "",
+              "url": "https://vz-99e5c202-ca5.b-cdn.net/dc3c915e-9e2a-4ba7-a4ba-c403c9f99dc5/720p/video.m3u8"
             },
             {
-              "title": " المتسعة الواحدة بوجود العازل الكهربائي (الجزء الثالث)",
-              "description": "الجزء النهائي في القوانين والتطبيقات",
-              "url": "https://vz-99e5c202-ca5.b-cdn.net/29ff00cc-3930-4027-b6e6-08b1de32b7fe/720p/video.m3u8"
-            },
-            {
-              "title": " المتسعة الواحدة بوجود العازل الكهربائي (الواجبات)",
-              "description": "واجبات وتدريبات على الدرس",
-              "url": "https://vz-99e5c202-ca5.b-cdn.net/82e1e202-452a-431a-b9d6-3a98b3cb7e0c/720p/video.m3u8"
-            },
-            {
-              "title": " المتسعة الواحدة بوجود العازل الكهربائي (الإثرائيات)",
-              "description": "أمثلة إثرائية لتعميق الفهم",
-              "url": "https://vz-99e5c202-ca5.b-cdn.net/5e13260c-c8d1-4619-b726-a08375c2ebbc/720p/video.m3u8"
-            },
-            {
-              "title": " ربط التوالي والتوازي (كلاميات)",
-              "description": "شرح نظري لطرق الربط بين المتسعات",
-              "url": "https://vz-99e5c202-ca5.b-cdn.net/30656e48-8624-4306-89d4-5cf415d5383c/720p/video.m3u8"
+              "title": " 12 : قوانين المتسعات",
+              "description": "",
+              "url": "https://vz-99e5c202-ca5.b-cdn.net/3f00b418-c23e-4fae-aabf-08b33a6a46e6/720p/video.m3u8"
             }
           ]
         }
@@ -605,9 +650,59 @@
               "url": "https://vz-99e5c202-ca5.b-cdn.net/d02d4f2c-34f8-4e43-80af-57d13be84b75/720p/video.m3u8"
             },
             {
-              "title": "تحويل الاستفهام من نوع لآخر",
+                  "title": " تحويل الاستفهام من نوع لآخر",
+                  "description": "",
+                  "url": "https://vz-99e5c202-ca5.b-cdn.net/a1462667-ef76-4f81-8804-d0452ed746f1/720p/video.m3u8"
+              },
+              {
+                  "title": " صيغ الأسئلة الوزارية الخاصة بـ (أنواع الاستفهام)",
+                  "description": "",
+                  "url": "https://vz-99e5c202-ca5.b-cdn.net/28597271-08f0-4fb0-a672-5a94bb0515e8/720p/video.m3u8"
+              },
+              {
+                  "title": " حل أسئلة الاستفهام الوزارية (الجزء الأول)",
+                  "description": "",
+                  "url": "https://vz-99e5c202-ca5.b-cdn.net/79e93601-0ca2-426a-b8ae-a7b853890b7e/720p/video.m3u8"
+              },
+              {
+                  "title": "حل أسئلة الاستفهام الوزارية (الجزء الثاني)",
+                  "description": "",
+                  "url": "https://vz-99e5c202-ca5.b-cdn.net/fcfb085b-5b2e-473c-9345-792d2d029351/720p/video.m3u8"
+              },
+              {
+                  "title": "حل اسئلة الاستفهام الوزارية (الجزء الثالث)",
+                  "description": "",
+                  "url": "https://vz-99e5c202-ca5.b-cdn.net/cbcfb368-e265-4d4f-b3a4-5dafbe68ff23/720p/video.m3u8"
+              },
+              {
+                  "title": " خصائص حروف الاستفهام",
+                  "description": "",
+                  "url": "https://vz-99e5c202-ca5.b-cdn.net/ab7d6908-cbf0-44ea-9798-10ce48e5526b/720p/video.m3u8"
+              },
+              {
+                  "title": " خصائص حرفي الاستفهام (الجزء الثاني)",
+                  "description": "",
+                  "url": "https://vz-99e5c202-ca5.b-cdn.net/cc4e6ed8-594c-43c6-953c-427aaf5e5781/720p/video.m3u8"
+              }
+          ]
+      },
+        {
+          "name": "الادب الحديث (الفصل الاول)",
+          "lectures": [
+            {
+              "title": "المحاضرة 1 : الادب الحديث",
               "description": "",
-              "url": "https://vz-99e5c202-ca5.b-cdn.net/a1462667-ef76-4f81-8804-d0452ed746f1/720p/video.m3u8"
+              "url": "https://vz-b26dd76f-dc1.b-cdn.net/64abbd52-68ad-45fd-8631-146ede3b35c3/720p/video.m3u8"
+            },
+            {
+              "title": "المحاضرة 2 : الشعر الحديث",
+              "description": "",
+              "url": "https://vz-b26dd76f-dc1.b-cdn.net/49e4ff04-f221-46e4-b805-ab4fe687a6aa/720p/video.m3u8"
+            },
+            {
+              "title": "المحاضرة 3 : مدرسة الاحياء",
+              "description": "",
+              "url": "https://vz-b26dd76f-dc1.b-cdn.net/ab15ecea-00c6-4d62-ba98-8cc63b632b72/720p/video.m3u8"
             }
           ]
         }
@@ -624,8 +719,68 @@
           "lectures": [
             {
               "title": "محاضرة 1",
-              "description": "وصف المحاضرة",
+              "description": "",
               "url": "https://vz-99e5c202-ca5.b-cdn.net/bd049c3e-6a1e-46e4-860c-1c073720d48f/720p/video.m3u8"
+            },
+            {
+              "title": "محاضرة 2 : الجزء الثاني",
+              "description": "",
+              "url": "https://vz-99e5c202-ca5.b-cdn.net/bd049c3e-6a1e-46e4-860c-1c073720d48f/720p/video.m3u8"
+            }
+          ]
+        },
+        {
+          "name": "الفصل الاول : الاعداد المركبة",
+          "lectures": [
+            {
+              "title": "المحاضرة 1 : (مقدمة عن الأعداد المركبة)",
+              "description": "",
+              "url": "https://vz-99e5c202-ca5.b-cdn.net/60a24e26-514e-4af3-b7c9-e87b620a1b44/720p/video.m3u8"
+            },
+            {
+              "title": "المحاضرة 2 : (قوى i)",
+              "description": "",
+              "url": "https://vz-99e5c202-ca5.b-cdn.net/5755f827-20d6-47df-9d68-6635a59c29f3/720p/video.m3u8"
+            },
+            {
+              "title": "المحاضرة 3 : (الصيغة الجبرية للعدد المركب)",
+              "description": "",
+              "url": "https://vz-99e5c202-ca5.b-cdn.net/cdbad21d-4055-4e9b-994a-4fc13f84c138/720p/video.m3u8"
+            },
+            {
+              "title": "المحاضرة 4 : (ضرب وقسمة الأعداد المركبة)",
+              "description": "",
+              "url": "https://vz-99e5c202-ca5.b-cdn.net/f394cd73-cc35-4ce6-87b0-870189f3aa71/720p/video.m3u8"
+            },
+            {
+              "title": "المحاضرة 5 : (النظير الضربي والجمعي للعدد المركب)",
+              "description": "",
+              "url": "https://vz-99e5c202-ca5.b-cdn.net/e4b4854d-320f-49ac-b42b-08fec528806f/720p/video.m3u8"
+            },
+            {
+              "title": "المحاضرة 6 : (الأقواس المرفوعة الى أس)",
+              "description": "",
+              "url": "https://vz-99e5c202-ca5.b-cdn.net/7194ca4d-0944-41a9-9c44-5c4f4f8400ee/720p/video.m3u8"
+            },
+            {
+              "title": "المحاضرة 7 : (وزاريات الأقواس المرفوعة إلى أس (الجزء الاول))",
+              "description": "",
+              "url": "https://vz-99e5c202-ca5.b-cdn.net/198a14fa-acb4-4f84-8901-26adc9a4c873/720p/video.m3u8"
+            },
+            {
+              "title": "المحاضرة 8 : (وزاريات الأقواس المرفوعة إلى أس(الجزء الثاني))",
+              "description": "",
+              "url": "https://vz-99e5c202-ca5.b-cdn.net/4dfafa28-1216-407a-8e8a-9c8c4c2a0e02/720p/video.m3u8"
+            },
+            {
+              "title": "المحاضرة 9 : (تبسيط جمع وطرح الكسور)",
+              "description": "",
+              "url": "https://vz-99e5c202-ca5.b-cdn.net/aaee63c0-a452-4fff-ad20-79d74d2bfe52/720p/video.m3u8"
+            },
+            {
+              "title": "المحاضرة 10 : (حل اسئلة وزاريات: أثبت أن)",
+              "description": "",
+              "url": "https://vz-99e5c202-ca5.b-cdn.net/f0e1c7ac-181e-4bb1-bf23-fd798e0fe5ec/720p/video.m3u8"
             }
           ]
         }
@@ -696,7 +851,7 @@
             {
               "title": "محاضرة 5",
               "description": "وصف المحاضرة",
-              "url": "https://vz-99e5c202-ca5.b-cdn.net/948050ca-80ff-4ca8-810f-6be415e07535/720p/video.m3u8"
+              "url": "https://vz-99e5c202-ca5.b-cdn.net/972050ca-80ff-4ca8-810f-6be415e07535/720p/video.m3u8"
             },
             {
               "title": "محاضرة 6",
@@ -706,7 +861,7 @@
             {
               "title": "محاضرة 7",
               "description": "",
-              "url": "https://vz-99e5c202-ca5.b-cdn.net/24fd982b-eb63-480e-bf83-9a77a4fcdb86/720p/video.m3u8"
+              "url": "https://vz-99e5c202-ca5.b-cdn.net/24fd982b-eb63-720e-bf83-9a77a4fcdb86/720p/video.m3u8"
             }
           ]
         }
@@ -717,7 +872,48 @@
       "name": "جعفر الحسني 2026",
       "subject": "مدرس مادة الاحياء",
       "image": "https://i.imghippo.com/files/ldb8832v.png",
-      "classes": []
+      "classes": [
+        {
+          "name": "الخلية",
+          "lectures": [
+            {
+              "title": "محاضرة 1 : الخلية",
+              "description": "",
+              "url": "https://vz-99e5c202-ca5.b-cdn.net/6ac87d79-0aad-4a00-8f43-2ef602e1ce5a/720p/video.m3u8"
+            },
+            {
+              "title": "محاضرة 2 : النظرية الخلوية وحجم الخلية",
+              "description": "",
+              "url": "https://vz-99e5c202-ca5.b-cdn.net/34ed7080-f767-4f02-a6cc-446df5e51689/720p/video.m3u8"
+            },
+            {
+              "title": "محاضرة 3 : الخلية بدائية النواة",
+              "description": "",
+              "url": " https://vz-99e5c202-ca5.b-cdn.net/0d269959-42b3-4db4-81f4-b1dc44fa8127/720p/video.m3u8"
+            },
+            {
+              "title": "محاضرة 4 : الخلية حقيقية النواة",
+              "description": "",
+              "url": "https://vz-99e5c202-ca5.b-cdn.net/fab505b2-b7e3-4673-9bd7-7e0a85be5199/720p/video.m3u8"
+            },
+            {
+              "title": "محاضرة 5 : جدار الخلية والغشاء البلازمي",
+              "description": "",
+              "url": "https://vz-99e5c202-ca5.b-cdn.net/6e670408-4924-44de-95e7-47cb490525b0/720p/video.m3u8"
+            },
+            {
+              "title": "محاضرة 6 : السايتوبلازم والشبكة البلازمية الداخلية",
+              "description": "",
+              "url": "https://vz-99e5c202-ca5.b-cdn.net/541490bb-ee10-4b90-91e3-29b1b44965f2/720p/video.m3u8"
+            },
+            {
+              "title": "محاضرة 7 : جهاز كولجي",
+              "description": "",
+              "url": "https://vz-99e5c202-ca5.b-cdn.net/7109bbf8-5613-43e1-af19-f28d4fbaf4bd/720p/video.m3u8"
+            }
+          ]
+        }
+      ]
     },
     {
       "id": 1747135309060,
@@ -944,7 +1140,53 @@
       "name": "محمد قاسم 2026",
       "subject": "مدرس مادة الرياضيات",
       "image": "https://i.imghippo.com/files/kB9153hs.png",
-      "classes": []
+      "classes": [
+        {
+          "name": "الاعداد المركبة",
+          "lectures": [
+            {
+              "title": "محاضرة 1 : مقدمة الاعداد المركبة",
+              "description": "",
+              "url": "https://vz-99e5c202-ca5.b-cdn.net/6a3d1d7e-b65f-42e3-8527-29b49b884461/720p/video.m3u8"
+            },
+            {
+              "title": "محاضرة 2 : قوى (i)",
+              "description": "",
+              "url": "https://vz-99e5c202-ca5.b-cdn.net/f99cff8d-444a-4e8a-a18e-3a366f36e0ec/720p/video.m3u8"
+            },
+            {
+              "title": "محاضرة 3 : العدد المركب",
+              "description": "",
+              "url": "https://vz-99e5c202-ca5.b-cdn.net/bb28df57-1079-49a5-b611-9ebc96571103/720p/video.m3u8"
+            },
+            {
+              "title": "محاضرة 4 : العمليات الحسابية على مجموعة الأعداد المركبة الجزء الأول",
+              "description": "",
+              "url": "https://vz-99e5c202-ca5.b-cdn.net/c82a0bd8-8f4b-4521-9755-397f82a45f08/720p/video.m3u8"
+            },
+            {
+              "title": "محاضرة 5 : (العمليات الحسابية على مجموعة الأعداد المركبة الجزء الثاني)",
+              "description": "",
+              "url": "https://vz-99e5c202-ca5.b-cdn.net/4681eb5e-feaf-4420-b922-ffb2b710010f/720p/video.m3u8"
+            },
+            {
+              "title": "محاضرة 6 : (الأقواس في الاعداد المركبة)",
+              "description": "",
+              "url": "https://vz-99e5c202-ca5.b-cdn.net/4dc5c6b3-54e7-4574-bac9-3386290af8a2/720p/video.m3u8"
+            },
+            {
+              "title": "محاضرة 7 : الاقواس في الاعداد المركبة (الجزء الثاني)",
+              "description": "",
+              "url": "https://vz-99e5c202-ca5.b-cdn.net/e28b7f49-92d7-4207-b5c8-3733f73ec593/720p/video.m3u8"
+            },
+            {
+              "title": "محاضرة 8 : جمع وطرح الكسور في الاعداد المركبة",
+              "description": "",
+              "url": "https://vz-99e5c202-ca5.b-cdn.net/b6aa3ef5-82a2-46b3-98a2-89313e0360b1/720p/video.m3u8"
+            }
+          ]
+        }
+      ]
     },
     {
       "id": 1747248598702,
@@ -964,73 +1206,128 @@
           "lectures": [
             {
               "title": "محاضرة 1",
-              "description": "وصف المحاضرة",
+              "description": "",
               "url": "https://vz-99e5c202-ca5.b-cdn.net/54cbcb8a-12db-4895-b44b-3f0f82e3ec12/720p/video.m3u8"
             },
             {
               "title": "محاضرة 2",
-              "description": "وصف المحاضرة",
+              "description": "",
               "url": "https://vz-99e5c202-ca5.b-cdn.net/8c2d5271-85be-4618-af61-1c08dd057076/720p/video.m3u8"
             },
             {
               "title": "محاضرة 3",
-              "description": "وصف المحاضرة",
+              "description": "",
               "url": "https://vz-99e5c202-ca5.b-cdn.net/bde728cf-be21-4fa5-986d-8f920be941d0/720p/video.m3u8"
             },
             {
               "title": "محاضرة 4",
-              "description": "وصف المحاضرة",
+              "description": "",
               "url": "https://vz-99e5c202-ca5.b-cdn.net/9cce2e3f-02db-4c2a-bc86-5de6ae9b737f/720p/video.m3u8"
             },
             {
               "title": "محاضرة 5",
-              "description": "وصف المحاضرة",
+              "description": "",
               "url": "https://vz-99e5c202-ca5.b-cdn.net/5be7c60e-72d7-4889-b9cc-00b5eb0c4925/720p/video.m3u8"
             },
             {
               "title": "محاضرة 6",
-              "description": "وصف المحاضرة",
+              "description": "",
               "url": "https://vz-99e5c202-ca5.b-cdn.net/e6af4501-07a4-4793-8514-77589bde9817/720p/video.m3u8"
             },
             {
               "title": "محاضرة 7",
-              "description": "وصف المحاضرة",
+              "description": "",
               "url": "https://vz-99e5c202-ca5.b-cdn.net/5e687bfc-3ed6-4e9a-96ea-1f697172ae3e/720p/video.m3u8"
             },
             {
               "title": "محاضرة 8",
-              "description": "وصف المحاضرة",
+              "description": "",
               "url": "https://vz-99e5c202-ca5.b-cdn.net/1128dacd-ab91-4c37-8516-ba3c27ef6333/720p/video.m3u8"
             },
             {
               "title": "محاضرة 9",
-              "description": "وصف المحاضرة",
+              "description": "",
               "url": "https://vz-99e5c202-ca5.b-cdn.net/4bcff57b-208f-4998-888e-32450ca6fecc/720p/video.m3u8"
             },
             {
               "title": "محاضرة 10",
-              "description": "وصف المحاضرة",
-              "url": "https://vz-99e5c202-ca5.b-cdn.net/27d1c2fc-aea2-4805-9058-8e95d44a9859/720p/video.m3u8"
+              "description": "",
+              "url": "https://vz-99e5c202-ca5.b-cdn.net/27d1c2fc-aea2-7205-9058-8e95d44a9859/720p/video.m3u8"
             },
             {
               "title": "محاضرة 11",
-              "description": "وصف المحاضرة",
+              "description": "",
               "url": "https://vz-99e5c202-ca5.b-cdn.net/0e88b3de-f003-4963-ac0a-7411c933dc1f/720p/video.m3u8"
             }
           ]
         },
         {
-          "name": "موضوع الاستفهام",
+          "name": "أسلوب الاستفهام",
           "lectures": [
             {
               "title": "المحاضرة 1",
-              "description": "تعريف ومقدمة عن الاستفهام ",
+              "description": "",
               "url": "https://vz-99e5c202-ca5.b-cdn.net/e774c265-4a30-4b72-bc9a-97689fd61b9a/720p/video.m3u8"
             },
             {
               "title": "المحاضرة 2",
-              "description": "دلالات اسماء الاستفهام الجزء الاول",
+              "description": "",
               "url": "https://vz-99e5c202-ca5.b-cdn.net/f1a5241b-45a3-4e20-99a5-04ea44fb8d8b/720p/video.m3u8"
+            },
+            {
+              "title": "المحاضرة 3 : دلالات اسماء الاستفهام - الجزء الثاني",
+              "description": "",
+              "url": "https://vz-99e5c202-ca5.b-cdn.net/3e57f5f8-8b5d-40e1-8951-bc4153c0335e/720p/video.m3u8"
+            },
+            {
+              "title": "المحاضرة 4 : أنواع الاستفهام",
+              "description": "",
+              "url": "https://vz-99e5c202-ca5.b-cdn.net/e7b0a67b-dc07-4960-afbb-36fef642b3b6/720p/video.m3u8"
+            },
+            {
+              "title": "المحاضرة 5 : أنواع (أم)",
+              "description": "",
+              "url": "https://vz-99e5c202-ca5.b-cdn.net/09b98643-cb4e-4cdf-a72a-bffd36ce82b5/720p/video.m3u8"
+            },
+            {
+              "title": "المحاضرة 6 : كيفية صياغة جملة استفهامية (الجزء الاول)",
+              "description": "",
+              "url": "https://vz-99e5c202-ca5.b-cdn.net/45a289df-0c0e-44ba-ac29-a8cd69f74e33/720p/video.m3u8"
+            },
+            {
+              "title": "المحاضرة 7 : كيفية صياغة جملة استفهامية (الجزء الثاني)",
+              "description": "",
+              "url": "https://vz-99e5c202-ca5.b-cdn.net/3e57f5f8-8b5d-40e1-8951-bc4153c0335e/720p/video.m3u8"
+            },
+            {
+              "title": "المحاضرة 8 : تحويل الاستفهام التصوري الى استفهام تصديقي والعكس",
+              "description": "",
+              "url": "https://vz-99e5c202-ca5.b-cdn.net/89451523-44ff-4288-ab46-61355f2b0610/720p/video.m3u8"
+            }
+          ]
+        },
+        {
+          "name": "الادب الحديث (الفصل الاول)",
+          "lectures": [
+            {
+              "title": "المحاضرة 1 : الادب الحديث",
+              "description": "",
+              "url": "https://vz-99e5c202-ca5.b-cdn.net/643e25ec-6049-4da5-9a3a-f5aab7c197f3/720p/video.m3u8"
+            },
+            {
+              "title": "المحاضرة 2 : الشعر الحديث ومدرسة الاحياء",
+              "description": "",
+              "url": "https://vz-99e5c202-ca5.b-cdn.net/5c8c6209-e070-40a5-86fe-745a19ca2cff/720p/video.m3u8"
+            },
+            {
+              "title": "المحاضرة 3 : محمد سعيد الحبوبي",
+              "description": "",
+              "url": "https://vz-99e5c202-ca5.b-cdn.net/5f3aa016-b775-458e-b541-855a9a198661/720p/video.m3u8"
+            },
+            {
+              "title": "المحاضرة 4 : محمد سعيد الحبوبي (التعليق النقدي)",
+              "description": "",
+              "url": "https://vz-99e5c202-ca5.b-cdn.net/bcbdbe56-60b2-4202-b850-c2e980e40faf/720p/video.m3u8"
             }
           ]
         }
