@@ -2,29 +2,35 @@
 class AuthSystem {
     constructor() {
         this.validCodes = [
-            { code: 'EDU2025A', expiryDate: '2025-02-15', used: false },
-            { code: 'EDU2025B', expiryDate: '2025-02-15', used: false },
-            { code: 'EDU2025C', expiryDate: '2025-02-15', used: false },
-            { code: 'EDU2025D', expiryDate: '2025-02-15', used: false },
-            { code: 'EDU2025E', expiryDate: '2025-02-15', used: false },
-            { code: 'DEMO2025', expiryDate: '2025-12-31', used: false }, // Demo code
+            // أكواد جديدة مع صلاحيات طويلة (سنة كاملة)
+            { code: 'EDU2025X1', expiryDate: '2025-12-31', used: false },
+            { code: 'EDU2025X2', expiryDate: '2025-12-31', used: false },
+            { code: 'EDU2025X3', expiryDate: '2025-12-31', used: false },
+            { code: 'EDU2025X4', expiryDate: '2025-12-31', used: false },
+            { code: 'EDU2025X5', expiryDate: '2025-12-31', used: false },
+            { code: 'EDU2025X6', expiryDate: '2025-12-31', used: false },
+            { code: 'EDU2025X7', expiryDate: '2025-12-31', used: false },
+            { code: 'EDU2025X8', expiryDate: '2025-12-31', used: false },
+            { code: 'EDU2025X9', expiryDate: '2025-12-31', used: false },
+            { code: 'EDU2025X10', expiryDate: '2025-12-31', used: false },
             
-            // 14 كود إضافي
-            { code: 'EDU2025F', expiryDate: '2025-03-20', used: false },
-            { code: 'EDU2025G', expiryDate: '2025-03-20', used: false },
-            { code: 'EDU2025H', expiryDate: '2025-03-20', used: false },
-            { code: 'EDU2025J', expiryDate: '2025-03-20', used: false },
-            { code: 'EDU2025K', expiryDate: '2025-04-10', used: false },
-            { code: 'EDU2025L', expiryDate: '2025-04-10', used: false },
-            { code: 'EDU2025M', expiryDate: '2025-04-10', used: false },
-            { code: 'EDU2025N', expiryDate: '2025-05-05', used: false },
-            { code: 'EDU2025P', expiryDate: '2025-05-05', used: false },
-            { code: 'EDU2025Q', expiryDate: '2025-05-05', used: false },
-            { code: 'EDU2025R', expiryDate: '2025-06-15', used: false },
-            { code: 'EDU2025S', expiryDate: '2025-06-15', used: false },
-            { code: 'EDU2025T', expiryDate: '2025-06-15', used: false },
-            { code: 'EDU2025U', expiryDate: '2025-07-01', used: false },
-            { code: 'EDU2025V', expiryDate: '2025-07-01', used: false }
+            // أكواد تجريبية
+            { code: 'DEMO2025A', expiryDate: '2025-12-31', used: false },
+            { code: 'DEMO2025B', expiryDate: '2025-12-31', used: false },
+            { code: 'DEMO2025C', expiryDate: '2025-12-31', used: false },
+            
+            // أكواد خاصة بفترات محددة
+            { code: 'SUMMER2025', expiryDate: '2025-09-01', used: false },
+            { code: 'WINTER2025', expiryDate: '2025-03-01', used: false },
+            
+            // أكواد مميزة
+            { code: 'VIP2025A', expiryDate: '2025-12-31', used: false },
+            { code: 'VIP2025B', expiryDate: '2025-12-31', used: false },
+            { code: 'VIP2025C', expiryDate: '2025-12-31', used: false },
+            
+            // أكواد احتياطية
+            { code: 'BACKUP2025A', expiryDate: '2025-12-31', used: false },
+            { code: 'BACKUP2025B', expiryDate: '2025-12-31', used: false }
         ];
         
         this.loadUsedCodes();
@@ -58,6 +64,8 @@ class AuthSystem {
                 if (currentDate <= expiryDate) {
                     this.showMainApp();
                     return;
+                } else {
+                    localStorage.removeItem('authData');
                 }
             } catch (error) {
                 console.error('Error parsing auth data:', error);
@@ -150,6 +158,7 @@ class AuthSystem {
                 const welcomeModal = document.getElementById('welcomeModal');
                 if (welcomeModal) {
                     welcomeModal.style.display = 'flex';
+                    localStorage.setItem('hasSeenWelcome', 'true');
                 }
             }, 1000);
         }
@@ -166,10 +175,9 @@ class AuthSystem {
         if (savedCodes) {
             try {
                 const usedCodes = JSON.parse(savedCodes);
-                usedCodes.forEach(usedCode => {
-                    const codeData = this.validCodes.find(c => c.code === usedCode);
-                    if (codeData) {
-                        codeData.used = true;
+                this.validCodes.forEach(code => {
+                    if (usedCodes.includes(code.code)) {
+                        code.used = true;
                     }
                 });
             } catch (error) {
@@ -194,11 +202,11 @@ class AuthSystem {
             position: fixed;
             top: 2rem;
             right: 2rem;
-            background: var(--success-color);
+            background: #4CAF50;
             color: white;
             padding: 1rem 2rem;
-            border-radius: var(--radius-md);
-            box-shadow: var(--shadow-heavy);
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
             z-index: 1001;
             animation: slideInRight 0.5s ease;
         `;
@@ -206,7 +214,10 @@ class AuthSystem {
         document.body.appendChild(successDiv);
         
         setTimeout(() => {
-            successDiv.remove();
+            successDiv.style.opacity = '0';
+            setTimeout(() => {
+                successDiv.remove();
+            }, 500);
         }, 3000);
     }
 
