@@ -22,7 +22,10 @@ const motivationalMessages = [
 
 // Initialize the application
 document.addEventListener('DOMContentLoaded', function() {
-    initializeApp();
+    // Wait for auth system to initialize first
+    setTimeout(() => {
+        initializeApp();
+    }, 500);
 });
 
 async function initializeApp() {
@@ -32,7 +35,6 @@ async function initializeApp() {
         applyTheme(currentTheme);
         displayTeachers();
         updateStats();
-        showWelcomeModal();
     } catch (error) {
         console.error('Error initializing app:', error);
         showError('حدث خطأ في تحميل البيانات');
@@ -50,7 +52,50 @@ async function loadTeachersData() {
         teachersData = data.teachers;
     } catch (error) {
         console.error('Error loading teachers data:', error);
-        teachersData = [];
+        // Sample data for demo
+        teachersData = [
+            {
+                id: 1,
+                name: "أحمد محمد",
+                subject: "الرياضيات",
+                image: "https://images.pexels.com/photos/2379004/pexels-photo-2379004.jpeg?auto=compress&cs=tinysrgb&w=300",
+                classes: [
+                    {
+                        name: "الجبر المتقدم",
+                        lectures: [
+                            {
+                                title: "مقدمة في الجبر",
+                                description: "شرح أساسيات الجبر والمعادلات",
+                                url: "https://sample-videos.com/zip/10/mp4/SampleVideo_1280x720_1mb.mp4"
+                            },
+                            {
+                                title: "حل المعادلات الخطية",
+                                description: "طرق حل المعادلات الخطية المختلفة",
+                                url: "https://sample-videos.com/zip/10/mp4/SampleVideo_1280x720_2mb.mp4"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                id: 2,
+                name: "فاطمة علي",
+                subject: "الفيزياء",
+                image: "https://images.pexels.com/photos/3184291/pexels-photo-3184291.jpeg?auto=compress&cs=tinysrgb&w=300",
+                classes: [
+                    {
+                        name: "الميكانيكا الكلاسيكية",
+                        lectures: [
+                            {
+                                title: "قوانين نيوتن",
+                                description: "شرح قوانين نيوتن الثلاثة للحركة",
+                                url: "https://sample-videos.com/zip/10/mp4/SampleVideo_1280x720_1mb.mp4"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ];
     }
 }
 
@@ -182,17 +227,6 @@ function applyTheme(theme) {
 }
 
 // Welcome Modal
-function showWelcomeModal() {
-    const modal = document.getElementById('welcomeModal');
-    const hasSeenWelcome = localStorage.getItem('hasSeenWelcome');
-    
-    if (!hasSeenWelcome) {
-        modal.style.display = 'flex';
-    } else {
-        modal.style.display = 'none';
-    }
-}
-
 function closeWelcomeModal() {
     const modal = document.getElementById('welcomeModal');
     modal.style.display = 'none';
@@ -476,7 +510,7 @@ function playLecture(url, title, description, lectureId) {
         videoElement.style.display = 'block';
         
         // Function to show error
-        const showError = (message) => {
+        const showVideoError = (message) => {
             errorMessage.textContent = message;
             errorElement.style.display = 'flex';
             videoElement.style.display = 'none';
@@ -489,7 +523,7 @@ function playLecture(url, title, description, lectureId) {
                 const script = document.createElement('script');
                 script.src = 'https://cdn.jsdelivr.net/npm/hls.js@latest';
                 script.onload = () => startHlsPlayback(hlsUrl);
-                script.onerror = () => showError('فشل تحميل مشغل الفيديو');
+                script.onerror = () => showVideoError('فشل تحميل مشغل الفيديو');
                 document.head.appendChild(script);
             } else {
                 startHlsPlayback(hlsUrl);
@@ -508,7 +542,7 @@ function playLecture(url, title, description, lectureId) {
                 hlsPlayer.on(Hls.Events.MANIFEST_PARSED, () => {
                     loadingElement.style.display = 'none';
                     videoElement.play().catch(e => {
-                        showError('اضغط لتشغيل الفيديو');
+                        showVideoError('اضغط لتشغيل الفيديو');
                         errorElement.onclick = () => videoElement.play();
                     });
                 });
@@ -517,13 +551,13 @@ function playLecture(url, title, description, lectureId) {
                     if (data.fatal) {
                         switch(data.type) {
                             case Hls.ErrorTypes.NETWORK_ERROR:
-                                showError('خطأ في الشبكة، يرجى المحاولة لاحقاً');
+                                showVideoError('خطأ في الشبكة، يرجى المحاولة لاحقاً');
                                 break;
                             case Hls.ErrorTypes.MEDIA_ERROR:
-                                showError('خطأ في تحميل الفيديو');
+                                showVideoError('خطأ في تحميل الفيديو');
                                 break;
                             default:
-                                showError('خطأ في تشغيل الفيديو');
+                                showVideoError('خطأ في تشغيل الفيديو');
                         }
                     }
                 });
@@ -532,12 +566,12 @@ function playLecture(url, title, description, lectureId) {
                 videoElement.src = hlsUrl;
                 videoElement.addEventListener('loadedmetadata', () => {
                     videoElement.play().catch(e => {
-                        showError('اضغط لتشغيل الفيديو');
+                        showVideoError('اضغط لتشغيل الفيديو');
                         errorElement.onclick = () => videoElement.play();
                     });
                 });
             } else {
-                showError('المتصفح لا يدعم تشغيل هذا النوع من الفيديو');
+                showVideoError('المتصفح لا يدعم تشغيل هذا النوع من الفيديو');
             }
         };
         
@@ -547,7 +581,7 @@ function playLecture(url, title, description, lectureId) {
                 const script = document.createElement('script');
                 script.src = 'https://cdn.dashjs.org/latest/dash.all.min.js';
                 script.onload = () => startDashPlayback(dashUrl);
-                script.onerror = () => showError('فشل تحميل مشغل الفيديو');
+                script.onerror = () => showVideoError('فشل تحميل مشغل الفيديو');
                 document.head.appendChild(script);
             } else {
                 startDashPlayback(dashUrl);
@@ -564,13 +598,13 @@ function playLecture(url, title, description, lectureId) {
             dashPlayer.on(dashjs.MediaPlayer.events.PLAYBACK_LOADED, () => {
                 loadingElement.style.display = 'none';
                 videoElement.play().catch(e => {
-                    showError('اضغط لتشغيل الفيديو');
+                    showVideoError('اضغط لتشغيل الفيديو');
                     errorElement.onclick = () => videoElement.play();
                 });
             });
             
             dashPlayer.on(dashjs.MediaPlayer.events.ERROR, (e) => {
-                showError('خطأ في تحميل الفيديو');
+                showVideoError('خطأ في تحميل الفيديو');
             });
         };
         
@@ -579,11 +613,11 @@ function playLecture(url, title, description, lectureId) {
             // Standard video formats
             videoElement.src = url;
             videoElement.addEventListener('error', () => {
-                showError('لا يمكن تحميل الفيديو');
+                showVideoError('لا يمكن تحميل الفيديو');
             });
             
             videoElement.play().catch(e => {
-                showError('اضغط لتشغيل الفيديو');
+                showVideoError('اضغط لتشغيل الفيديو');
                 errorElement.onclick = () => videoElement.play();
             });
         } 
@@ -606,7 +640,7 @@ function playLecture(url, title, description, lectureId) {
         }
         else {
             // Unsupported format
-            showError('نوع الفيديو غير مدعوم');
+            showVideoError('نوع الفيديو غير مدعوم');
         }
     }
     
@@ -626,8 +660,6 @@ function playLecture(url, title, description, lectureId) {
     // Update complete button
     updateVideoCompleteButton(lectureId);
 }
-
-// ... (بقية الدوال تبقى كما هي بدون تغيير)
 
 // Study Challenge System
 function selectTimeButton(selectedBtn) {
@@ -852,22 +884,6 @@ function showSuccessMessage(message) {
         successDiv.remove();
     }, 3000);
 }
-
-// Add CSS animation for slide in right
-const style = document.createElement('style');
-style.textContent = `
-    @keyframes slideInRight {
-        from {
-            opacity: 0;
-            transform: translateX(100px);
-        }
-        to {
-            opacity: 1;
-            transform: translateX(0);
-        }
-    }
-`;
-document.head.appendChild(style);
 
 // Handle window resize for responsive design
 window.addEventListener('resize', () => {

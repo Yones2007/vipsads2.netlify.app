@@ -9,8 +9,39 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
+    <!-- Login Modal -->
+    <div id="loginModal" class="modal-overlay" style="display: flex;">
+        <div class="login-modal">
+            <div class="login-content">
+                <div class="login-icon">
+                    <i class="fas fa-key"></i>
+                </div>
+                <h2>تسجيل الدخول</h2>
+                <p>أدخل كود التفعيل للوصول إلى المنصة</p>
+                <form id="loginForm" class="login-form">
+                    <div class="input-group">
+                        <input type="text" id="activationCode" placeholder="كود التفعيل" required>
+                        <i class="fas fa-key input-icon"></i>
+                    </div>
+                    <button type="submit" class="btn-login">
+                        <i class="fas fa-sign-in-alt"></i>
+                        دخول
+                    </button>
+                </form>
+                <div id="loginError" class="login-error" style="display: none;"></div>
+                <div class="login-footer">
+                    <p>للحصول على كود التفعيل تواصل معنا</p>
+                    <a href="https://t.me/tteiio" target="_blank" class="contact-link">
+                        <i class="fab fa-telegram"></i>
+                        تليجرام
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <!-- Welcome Message -->
-    <div id="welcomeModal" class="modal-overlay">
+    <div id="welcomeModal" class="modal-overlay" style="display: none;">
         <div class="welcome-modal">
             <button class="close-btn" onclick="closeWelcomeModal()">
                 <i class="fas fa-times"></i>
@@ -56,15 +87,20 @@
                         التحدي الدراسي
                     </button>
                 </div>
-                <div class="theme-switcher">
-                    <button class="theme-btn" data-theme="default" title="الثيم الأساسي">
-                        <i class="fas fa-sun"></i>
-                    </button>
-                    <button class="theme-btn" data-theme="dark" title="الوضع الداكن">
-                        <i class="fas fa-moon"></i>
-                    </button>
-                    <button class="theme-btn" data-theme="pink" title="الثيم الوردي">
-                        <i class="fas fa-heart"></i>
+                <div class="user-controls">
+                    <div class="theme-switcher">
+                        <button class="theme-btn" data-theme="default" title="الثيم الأساسي">
+                            <i class="fas fa-sun"></i>
+                        </button>
+                        <button class="theme-btn" data-theme="dark" title="الوضع الداكن">
+                            <i class="fas fa-moon"></i>
+                        </button>
+                        <button class="theme-btn" data-theme="pink" title="الثيم الوردي">
+                            <i class="fas fa-heart"></i>
+                        </button>
+                    </div>
+                    <button class="logout-btn" onclick="logout()" title="تسجيل الخروج">
+                        <i class="fas fa-sign-out-alt"></i>
                     </button>
                 </div>
             </div>
@@ -327,6 +363,7 @@
         </div>
     </footer>
 
+    <script src="auth.js"></script>
     <script src="script.js"></script>
 </body>
 </html>
