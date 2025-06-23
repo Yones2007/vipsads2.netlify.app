@@ -8,6 +8,23 @@ class AuthSystem {
             { code: 'EDU2025D', expiryDate: '2025-02-15', used: false },
             { code: 'EDU2025E', expiryDate: '2025-02-15', used: false },
             { code: 'DEMO2025', expiryDate: '2025-12-31', used: false }, // Demo code
+            
+            // 14 كود إضافي
+            { code: 'EDU2025F', expiryDate: '2025-03-20', used: false },
+            { code: 'EDU2025G', expiryDate: '2025-03-20', used: false },
+            { code: 'EDU2025H', expiryDate: '2025-03-20', used: false },
+            { code: 'EDU2025J', expiryDate: '2025-03-20', used: false },
+            { code: 'EDU2025K', expiryDate: '2025-04-10', used: false },
+            { code: 'EDU2025L', expiryDate: '2025-04-10', used: false },
+            { code: 'EDU2025M', expiryDate: '2025-04-10', used: false },
+            { code: 'EDU2025N', expiryDate: '2025-05-05', used: false },
+            { code: 'EDU2025P', expiryDate: '2025-05-05', used: false },
+            { code: 'EDU2025Q', expiryDate: '2025-05-05', used: false },
+            { code: 'EDU2025R', expiryDate: '2025-06-15', used: false },
+            { code: 'EDU2025S', expiryDate: '2025-06-15', used: false },
+            { code: 'EDU2025T', expiryDate: '2025-06-15', used: false },
+            { code: 'EDU2025U', expiryDate: '2025-07-01', used: false },
+            { code: 'EDU2025V', expiryDate: '2025-07-01', used: false }
         ];
         
         this.loadUsedCodes();
