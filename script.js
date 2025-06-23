@@ -5,6 +5,8 @@ let currentChallenge = null;
 let completedLectures = JSON.parse(localStorage.getItem('completedLectures')) || [];
 let currentTheme = localStorage.getItem('theme') || 'default';
 let currentLecture = null;
+let hlsPlayer = null;
+let dashPlayer = null;
 
 // Motivational messages for study challenges
 const motivationalMessages = [
@@ -428,35 +430,184 @@ function updateVideoCompleteButton(lectureId) {
     }
 }
 
-// Video Player
+// Advanced Video Player with support for all formats
 function playLecture(url, title, description, lectureId) {
     currentLecture = { url, title, description, id: lectureId };
     
     // Show video section
     showSection('video');
     
+    // Clean up any existing players
+    if (hlsPlayer) {
+        hlsPlayer.destroy();
+        hlsPlayer = null;
+    }
+    
+    if (dashPlayer) {
+        dashPlayer.destroy();
+        dashPlayer = null;
+    }
+    
     // Update video player
     const videoPlayer = document.getElementById('videoPlayer');
     if (videoPlayer) {
         videoPlayer.innerHTML = `
-            <div class="video-placeholder">
-                <i class="fas fa-play-circle" style="font-size: 4rem; opacity: 0.7;"></i>
-                <p style="margin-top: 1rem;">انقر لتشغيل المحاضرة</p>
-                <button onclick="window.open('${url}', '_blank')" style="
-                    background: var(--primary-color);
-                    color: white;
-                    border: none;
-                    padding: 1rem 2rem;
-                    border-radius: var(--radius-md);
-                    cursor: pointer;
-                    margin-top: 1rem;
-                    font-weight: 600;
-                ">
-                    <i class="fas fa-external-link-alt"></i>
-                    تشغيل المحاضرة
-                </button>
+            <div class="video-container">
+                <video id="main-video" controls autoplay playsinline style="width:100%; height:100%; background:#000;"></video>
+                <div class="video-loading" style="display:none;">
+                    <i class="fas fa-spinner fa-spin"></i>
+                    <p>جاري تحميل الفيديو...</p>
+                </div>
+                <div class="video-error" style="display:none;">
+                    <i class="fas fa-exclamation-triangle"></i>
+                    <p class="error-message"></p>
+                </div>
             </div>
         `;
+        
+        const videoElement = document.getElementById('main-video');
+        const loadingElement = document.querySelector('.video-loading');
+        const errorElement = document.querySelector('.video-error');
+        const errorMessage = document.querySelector('.error-message');
+        
+        // Reset elements
+        loadingElement.style.display = 'none';
+        errorElement.style.display = 'none';
+        videoElement.style.display = 'block';
+        
+        // Function to show error
+        const showError = (message) => {
+            errorMessage.textContent = message;
+            errorElement.style.display = 'flex';
+            videoElement.style.display = 'none';
+            loadingElement.style.display = 'none';
+        };
+        
+        // Function to initialize HLS
+        const initHls = (hlsUrl) => {
+            if (!window.Hls) {
+                const script = document.createElement('script');
+                script.src = 'https://cdn.jsdelivr.net/npm/hls.js@latest';
+                script.onload = () => startHlsPlayback(hlsUrl);
+                script.onerror = () => showError('فشل تحميل مشغل الفيديو');
+                document.head.appendChild(script);
+            } else {
+                startHlsPlayback(hlsUrl);
+            }
+        };
+        
+        // Function to start HLS playback
+        const startHlsPlayback = (hlsUrl) => {
+            if (Hls.isSupported()) {
+                loadingElement.style.display = 'flex';
+                
+                hlsPlayer = new Hls();
+                hlsPlayer.loadSource(hlsUrl);
+                hlsPlayer.attachMedia(videoElement);
+                
+                hlsPlayer.on(Hls.Events.MANIFEST_PARSED, () => {
+                    loadingElement.style.display = 'none';
+                    videoElement.play().catch(e => {
+                        showError('اضغط لتشغيل الفيديو');
+                        errorElement.onclick = () => videoElement.play();
+                    });
+                });
+                
+                hlsPlayer.on(Hls.Events.ERROR, (event, data) => {
+                    if (data.fatal) {
+                        switch(data.type) {
+                            case Hls.ErrorTypes.NETWORK_ERROR:
+                                showError('خطأ في الشبكة، يرجى المحاولة لاحقاً');
+                                break;
+                            case Hls.ErrorTypes.MEDIA_ERROR:
+                                showError('خطأ في تحميل الفيديو');
+                                break;
+                            default:
+                                showError('خطأ في تشغيل الفيديو');
+                        }
+                    }
+                });
+            } else if (videoElement.canPlayType('application/vnd.apple.mpegurl')) {
+                // Native HLS support for Safari
+                videoElement.src = hlsUrl;
+                videoElement.addEventListener('loadedmetadata', () => {
+                    videoElement.play().catch(e => {
+                        showError('اضغط لتشغيل الفيديو');
+                        errorElement.onclick = () => videoElement.play();
+                    });
+                });
+            } else {
+                showError('المتصفح لا يدعم تشغيل هذا النوع من الفيديو');
+            }
+        };
+        
+        // Function to initialize MPEG-DASH
+        const initDash = (dashUrl) => {
+            if (!window.dashjs) {
+                const script = document.createElement('script');
+                script.src = 'https://cdn.dashjs.org/latest/dash.all.min.js';
+                script.onload = () => startDashPlayback(dashUrl);
+                script.onerror = () => showError('فشل تحميل مشغل الفيديو');
+                document.head.appendChild(script);
+            } else {
+                startDashPlayback(dashUrl);
+            }
+        };
+        
+        // Function to start DASH playback
+        const startDashPlayback = (dashUrl) => {
+            loadingElement.style.display = 'flex';
+            
+            dashPlayer = dashjs.MediaPlayer().create();
+            dashPlayer.initialize(videoElement, dashUrl, true);
+            
+            dashPlayer.on(dashjs.MediaPlayer.events.PLAYBACK_LOADED, () => {
+                loadingElement.style.display = 'none';
+                videoElement.play().catch(e => {
+                    showError('اضغط لتشغيل الفيديو');
+                    errorElement.onclick = () => videoElement.play();
+                });
+            });
+            
+            dashPlayer.on(dashjs.MediaPlayer.events.ERROR, (e) => {
+                showError('خطأ في تحميل الفيديو');
+            });
+        };
+        
+        // Determine video type and initialize appropriate player
+        if (url.match(/\.(mp4|webm|ogg)$/i)) {
+            // Standard video formats
+            videoElement.src = url;
+            videoElement.addEventListener('error', () => {
+                showError('لا يمكن تحميل الفيديو');
+            });
+            
+            videoElement.play().catch(e => {
+                showError('اضغط لتشغيل الفيديو');
+                errorElement.onclick = () => videoElement.play();
+            });
+        } 
+        else if (url.match(/\.(m3u8)$/i)) {
+            // HLS Stream
+            initHls(url);
+        }
+        else if (url.match(/\.(mpd)$/i)) {
+            // MPEG-DASH Stream
+            initDash(url);
+        }
+        else if (url.match(/youtube\.com|youtu\.be/i)) {
+            // YouTube videos - Basic embed solution
+            videoPlayer.innerHTML = `
+                <div class="youtube-placeholder" style="text-align:center; padding:2rem;">
+                    <i class="fab fa-youtube" style="font-size:3rem; color:red;"></i>
+                    <p style="margin-top:1rem; font-size:1.2rem;">محتوى يوتيوب - يمكنك مشاهدته على الموقع الرسمي</p>
+                </div>
+            `;
+        }
+        else {
+            // Unsupported format
+            showError('نوع الفيديو غير مدعوم');
+        }
     }
     
     // Update video info
@@ -475,6 +626,8 @@ function playLecture(url, title, description, lectureId) {
     // Update complete button
     updateVideoCompleteButton(lectureId);
 }
+
+// ... (بقية الدوال تبقى كما هي بدون تغيير)
 
 // Study Challenge System
 function selectTimeButton(selectedBtn) {
