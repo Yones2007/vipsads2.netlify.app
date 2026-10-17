@@ -3,7 +3,7 @@ class AuthSystem {
     constructor() {
         this.validCodes = [
             // أكواد جديدة مع صلاحيات طويلة (سنة كاملة)
-            { code: 'EDU2025X1', expiryDate: '2025-12-31', used: false },
+            { code: 'EDU2025X1', expiryDate: '2026-12-31', used: false },
             { code: 'EDU2025X2', expiryDate: '2025-12-31', used: false },
             { code: 'EDU2025X3', expiryDate: '2025-12-31', used: false },
             { code: 'EDU2025X4', expiryDate: '2025-12-31', used: false },
